@@ -1,0 +1,16 @@
+
+
+copy file_name_here from 's3_bucket_location'  
+iam_role 'arn:aws:iam::8:role/redshift-role'
+gzip
+delimiter '|'
+manifest;
+
+
+-- Example Manifest file, then save as .json
+
+{
+  "entries": [
+{"url":"s3://part_0000_part_00.gz", "mandatory":true}
+	]
+}
